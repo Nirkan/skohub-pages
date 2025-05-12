@@ -1,0 +1,35 @@
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ex: <https://w3id.org/exampleVegetables/>.
+
+ex:
+    a skos:ConceptScheme;
+    dct:description "My wonderful vegetable vocabulary."@en;
+    dct:title "Vegetables"@en;
+    skos:hasTopConcept ex:1dabe, ex:5efdb, ex:be172 .
+ex:1dabe
+    a skos:Concept;
+    skos:narrower ex:65d4c, ex:be0b7, ex:fc9ee;
+    skos:prefLabel "Spinach"@en, "Spinat"@de;
+    skos:topConceptOf ex: .
+ex:5efdb a skos:Concept; skos:prefLabel "Pumpkin"@en; skos:topConceptOf ex: .
+
+ex:65d4c
+    a skos:Concept;
+    skos:broader ex:1dabe;
+    skos:inScheme ex:;
+    skos:prefLabel "Savoy"@en.
+ex:be0b7
+    a skos:Concept;
+    skos:broader ex:1dabe;
+    skos:inScheme ex:;
+    skos:prefLabel "Semi-Savoy"@en.
+ex:be172
+    a skos:Concept;
+    skos:prefLabel "Carrot"@en, "karotten"@de;
+    skos:topConceptOf ex: .
+ex:fc9ee
+    a skos:Concept;
+    skos:broader ex:1dabe;
+    skos:inScheme ex:;
+    skos:prefLabel "Flat-leaf"@en.
